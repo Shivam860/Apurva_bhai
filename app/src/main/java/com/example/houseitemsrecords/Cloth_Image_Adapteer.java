@@ -24,7 +24,7 @@ public class Cloth_Image_Adapteer extends RecyclerView.Adapter<Cloth_Image_Adapt
         mUpload = uploads;
     }
 
-    public void setUploads(List)
+    //public void setUploads(List
     @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
