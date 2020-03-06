@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private Button b1, b2;
 
     @Override
