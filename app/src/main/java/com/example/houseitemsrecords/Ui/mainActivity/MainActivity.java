@@ -1,4 +1,4 @@
-package com.example.houseitemsrecords;
+package com.example.houseitemsrecords.Ui.mainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.houseitemsrecords.R;
+import com.example.houseitemsrecords.clothes;
+import com.example.houseitemsrecords.furniture;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Openfurniture() {
-        Intent intent1 = new Intent(this,furniture.class);
+        Intent intent1 = new Intent(this, furniture.class);
         startActivity(intent1);
     }
 
     private void Openclothes() {
-        Intent intent = new Intent(this,clothes.class );
+        Intent intent = new Intent(this, clothes.class );
         startActivity(intent);
     }
 }
