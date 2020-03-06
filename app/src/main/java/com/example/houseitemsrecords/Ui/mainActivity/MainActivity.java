@@ -9,45 +9,52 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.houseitemsrecords.R;
+import com.example.houseitemsrecords.Utils.Utils;
 import com.example.houseitemsrecords.clothes;
 import com.example.houseitemsrecords.furniture;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button b1, b2;
+    private Button selectFurnitureBtn;
+    private Button selectClothsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        b1 = findViewById(R.id.button);
-        b2 = findViewById(R.id.button2);
-
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Openfurniture();
-            }
-        });
-
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Openclothes();
-            }
-        });
-
-        Toast.makeText(MainActivity.this,"Firebase connected " ,Toast.LENGTH_LONG).show();
+        callBaseMethod();
+        Utils.customToast(this,"Connection Established..");
     }
 
-    private void Openfurniture() {
-        Intent intent1 = new Intent(this, furniture.class);
-        startActivity(intent1);
+    private void callBaseMethod(){
+        setReferences();
+        setListeners();
     }
 
-    private void Openclothes() {
-        Intent intent = new Intent(this, clothes.class );
-        startActivity(intent);
+    private void setReferences(){
+        selectFurnitureBtn = findViewById(R.id.button);
+        selectClothsBtn = findViewById(R.id.button2);
+    }
+
+    private void setListeners(){
+        selectClothsBtn.setOnClickListener(this);
+        selectFurnitureBtn.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button:
+                navigateActivity(furniture.class);
+                break;
+
+            case R.id.button2:
+                navigateActivity(clothes.class);
+                break;
+        }
+    }
+
+    private <T> void navigateActivity(Class<T> navigationClass){
+        startActivity(new Intent(this,navigationClass));
     }
 }
