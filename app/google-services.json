@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1067860974763",
+    "firebase_url": "https://appurva-app.firebaseio.com",
+    "project_id": "appurva-app",
+    "storage_bucket": "appurva-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067860974763:android:e5d8736e187fafe257abee",
+        "android_client_info": {
+          "package_name": "com.example.houseitemsrecords"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067860974763-mtqvldlo10sgl7301q8019qq30e1uve2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.houseitemsrecords",
+            "certificate_hash": "bd6ccab151a45560fd1bf01796bf779aa1868ff6"
+          }
+        },
+        {
+          "client_id": "1067860974763-ls9cibvg3tdf1qcsvgf8o7601ara2lgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDRNJjPwNkfcjv9PEI7S1RTqj5Mjh0xm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067860974763-ls9cibvg3tdf1qcsvgf8o7601ara2lgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

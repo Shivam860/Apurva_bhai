@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clothes"
+    android:background="@drawable/wal">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="166dp"
+        android:layout_height="177dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="432dp"
+        android:background="@drawable/mcloth" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="166dp"
+        android:layout_height="177dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="219dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="429dp"
+        android:background="@drawable/gcloth" />
+
+    <Button
+        android:id="@+id/babycloth"
+        android:layout_width="191dp"
+        android:layout_height="174dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="174dp"
+       android:background="@drawable/babycloth" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="113dp"
+        android:text="Baby"
+        android:textAlignment="center"
+        android:textColor="#2EE07E"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="278dp"
+        android:layout_height="59dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="633dp"
+        android:text="Clothes"
+        android:textAlignment="center"
+        android:textColor="#2EE07E"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="362dp"
+        android:text="Apurva"
+        android:textAlignment="center"
+        android:textColor="#2EE07E"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="361dp"
+        android:text="Poonam"
+        android:textAlignment="center"
+        android:textColor="#2EE07E"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/addbut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="35dp"
+        android:background="#F30629"
+        android:text="Add"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#090808"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>
