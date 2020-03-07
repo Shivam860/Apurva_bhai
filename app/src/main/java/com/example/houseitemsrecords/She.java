@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.houseitemsrecords.Utils.Constants;
+import com.example.houseitemsrecords.Utils.Utils;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +33,7 @@ public class She extends AppCompatActivity {
     private Cloth_Image_Adapteer mAdapter;
 
     private DatabaseReference mDatabaseRef;
+    private StorageReference storageReference;
     private List<Upload_Clothes> mUploads;
 
     @Override
@@ -39,7 +45,13 @@ public class She extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
+
+
         mUploads = new ArrayList<>();
+
+
+        getImageFromWeb();
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Upload_Clothes");
 
@@ -64,4 +76,24 @@ public class She extends AppCompatActivity {
     }
 
 
+
+    private void getImageFromWeb(){
+        FirebaseStorage storage = Utils.getFireBaseInstance();
+        storageReference = storage.getReferenceFromUrl(Constants.BASE_URL);
+
+        StorageReference gsReference = storage.getReferenceFromUrl(Constants.STORAGE_PATH);
+        gsReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                System.out.println("success L "+uri);
+                if(uri != null){
+                    Picasso.with(She.this).load(uri).into((ImageView) findViewById(R.id.android_iv_id));
+                }
+            }
+        });
+
+
+    }
+
 }
+
