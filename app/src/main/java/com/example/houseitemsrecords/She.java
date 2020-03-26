@@ -51,7 +51,7 @@ public class She extends AppCompatActivity {
         mUploads = new ArrayList<>();
 
 
-        getImageFromWeb();
+
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Upload_Clothes");
 
@@ -76,22 +76,6 @@ public class She extends AppCompatActivity {
     }
 
 
-
-    private void getImageFromWeb(){
-        FirebaseStorage storage = Utils.getFireBaseInstance();
-        StorageReference gsReference = storage.getReferenceFromUrl(Constants.STORAGE_PATH);
-        gsReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                System.out.println("success L "+uri);
-                if(uri != null){
-                    Picasso.with(She.this).load(uri).into((ImageView) findViewById(R.id.android_iv_id));
-                }
-            }
-        });
-
-
-    }
 
 }
 

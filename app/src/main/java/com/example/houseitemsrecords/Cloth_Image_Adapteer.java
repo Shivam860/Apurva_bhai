@@ -40,12 +40,12 @@ public class Cloth_Image_Adapteer extends RecyclerView.Adapter<Cloth_Image_Adapt
         holder.textViewDescription.setText(uploadCurrent.getDescription());
         holder.textCiewRemark.setText(uploadCurrent.getRemark());
 
-      /*  Picasso.with(mContext)
-                .load(uploadCurrent.getImageUrl())
-                .fit()
-                .centerCrop()
-                .into(holder.imageView);*/
-        Utils.getImageFromWeb(mContext,holder.imageView,uploadCurrent.getImageUrl());
+//       Picasso.with(mContext)
+//                .load(uploadCurrent.getImageUrl())
+//                .fit()
+//                .centerCrop()
+//                .into(holder.imageView);
+       Utils.getImageFromWeb(mContext,holder.imageView,uploadCurrent.getImageUrl());
 
     }
 
