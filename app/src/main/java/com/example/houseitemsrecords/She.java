@@ -79,8 +79,6 @@ public class She extends AppCompatActivity {
 
     private void getImageFromWeb(){
         FirebaseStorage storage = Utils.getFireBaseInstance();
-        storageReference = storage.getReferenceFromUrl(Constants.BASE_URL);
-
         StorageReference gsReference = storage.getReferenceFromUrl(Constants.STORAGE_PATH);
         gsReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override

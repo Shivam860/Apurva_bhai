@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.houseitemsrecords.Utils.Utils;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -39,11 +40,13 @@ public class Cloth_Image_Adapteer extends RecyclerView.Adapter<Cloth_Image_Adapt
         holder.textViewDescription.setText(uploadCurrent.getDescription());
         holder.textCiewRemark.setText(uploadCurrent.getRemark());
 
-        Picasso.with(mContext)
+      /*  Picasso.with(mContext)
                 .load(uploadCurrent.getImageUrl())
                 .fit()
                 .centerCrop()
-                .into(holder.imageView);
+                .into(holder.imageView);*/
+        Utils.getImageFromWeb(mContext,holder.imageView,uploadCurrent.getImageUrl());
+
     }
 
     @Override

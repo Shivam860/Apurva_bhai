@@ -114,7 +114,7 @@ public class Add_clothes extends AppCompatActivity {
 
     private void uploadFile() {
         if(mImageClothUri != null){
-            StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()+"."+getFileExtension(mImageClothUri));
+            final StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()+"."+getFileExtension(mImageClothUri));
 
             mUploadTask = fileReference.putFile(mImageClothUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -134,9 +134,10 @@ public class Add_clothes extends AppCompatActivity {
                                     mEditTextDescription.getText().toString().trim(),
                                     mEditTextRemark.getText().toString().trim(),
                                     mEditTextCategory.getText().toString().trim(),
-                                    taskSnapshot.getMetadata().getReference().getDownloadUrl().toString());
+                                    fileReference.toString());
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child(uploadId).setValue(upload);
+
 
                         }
                     })
