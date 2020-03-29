@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.houseitemsrecords.Utils.Utils;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
@@ -74,7 +75,7 @@ public class Add_clothes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                if(mUploadTask != null && mUploadTask.isInProgress()){
-                   Toast.makeText(Add_clothes.this, " Upload is In Progress", Toast.LENGTH_SHORT).show();
+                   Utils.customToast(Add_clothes.this,"Upload in Progress.....");
                }
                else {
                    uploadFile();
@@ -127,9 +128,8 @@ public class Add_clothes extends AppCompatActivity {
                                     mProgressBarCloth.setProgress(0);
                                 }
                             },5000);
-
-                            Toast.makeText(Add_clothes.this, "upload Successful" , Toast.LENGTH_LONG).show();
-
+                            //Toast.makeText(Add_clothes.this, "upload Successful" , Toast.LENGTH_LONG).show();
+                            Utils.customToast(Add_clothes.this,"Upload Successfully..");
                             Upload_Clothes upload = new Upload_Clothes(mEditTextName.getText().toString().trim(),
                                     mEditTextDescription.getText().toString().trim(),
                                     mEditTextRemark.getText().toString().trim(),
@@ -137,8 +137,6 @@ public class Add_clothes extends AppCompatActivity {
                                     fileReference.toString());
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child(uploadId).setValue(upload);
-
-
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

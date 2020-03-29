@@ -21,33 +21,33 @@ public class furniture extends AppCompatActivity {
         b4 = findViewById(R.id.dinibutt);
         b5 = findViewById(R.id.addfurniture);
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openkitchenlist();
-            }
-        });
-
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openbedroomlist();
-            }
-        });
-
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                opendrowinglist();
-            }
-        });
-
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                opendininglist();
-            }
-        });
+//        b1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openkitchenlist();
+//            }
+//        });
+//
+//        b2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openbedroomlist();
+//            }
+//        });
+//
+//        b3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                opendrowinglist();
+//            }
+//        });
+//
+//        b4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                opendininglist();
+//            }
+//        });
 
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,29 +58,30 @@ public class furniture extends AppCompatActivity {
     }
 
     public void addFurniture(){
-
+     Intent intent = new Intent( this , Add_Furniture.class);
+     startActivity(intent);
     }
 
-    private void opendininglist() {
-
-        Intent intent = new Intent(this,diningroom.class);
-        startActivity(intent);
-    }
-
-    private void opendrowinglist() {
-
-        Intent intent = new Intent(this,drowingroom.class);
-        startActivity(intent);
-    }
-
-    private void openbedroomlist() {
-
-        Intent intent = new Intent(this,bedroom.class);
-        startActivity(intent);
-    }
-
-    private void openkitchenlist() {
-        Intent intent = new Intent(this,Kitchen.class);
-        startActivity(intent);
-    }
+//    private void opendininglist() {
+//
+//        Intent intent = new Intent(this,diningroom.class);
+//        startActivity(intent);
+//    }
+//
+//    private void opendrowinglist() {
+//
+//        Intent intent = new Intent(this,drowingroom.class);
+//        startActivity(intent);
+//    }
+//
+//    private void openbedroomlist() {
+//
+//        Intent intent = new Intent(this,bedroom.class);
+//        startActivity(intent);
+//    }
+//
+//    private void openkitchenlist() {
+//        Intent intent = new Intent(this,Kitchen.class);
+//        startActivity(intent);
+//    }
 }

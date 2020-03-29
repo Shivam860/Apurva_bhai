@@ -4,4 +4,12 @@
     <string name="furniture">Furniture</string>
     <string name="clothes">Clothes</string>
     <string name="welcome">Welcome</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="remark">Remark</string>
+    <string name="add_items">Add items</string>
+    <string name="upload">Upload</string>
+    <string name="category">Category</string>
+
+
 </resources>
